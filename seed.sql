@@ -1,3 +1,5 @@
+-- Database engine: PostgreSQL
+-- This script uses PostgreSQL functions (random, generate_series)
 INSERT INTO departments (department_name)
 VALUES
 ('Human Resources'),
