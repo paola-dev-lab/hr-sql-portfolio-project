@@ -1,12 +1,12 @@
 CREATE TABLE departments (
 	department_id	SERIAL PRIMARY KEY,
-	department_name	VARCHAR(20) NOT NULL
+	department_name	VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE employees (
 	employee_id SERIAL PRIMARY KEY,
-	first_name	VARCHAR(10)	NOT NULL,
-	last_name	VARCHAR(10)	NOT NULL,
+	first_name	VARCHAR(50)	NOT NULL,
+	last_name	VARCHAR(50)	NOT NULL,
 	hire_date	DATE	NOT NULL,
 	department_id INT REFERENCES departments(department_id)
 );
