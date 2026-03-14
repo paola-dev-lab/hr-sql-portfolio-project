@@ -1,17 +1,20 @@
-# 📊 Analyse SQL de données RH – Projet SIRH 
+# 📊 Analyse SQL de données RH — Projet SIRH
 
 ## Présentation
 
-Ce projet simule un système d'information RH (SIRH) pour une entreprise de 250 salariés.
+Ce projet consiste à modéliser et analyser un jeu de données RH à l'aide de SQL.
 
 L'objectif est de démontrer comment SQL peut être utilisé pour :
 
-- structurer des données RH
+- structurer des données RH dans une base relationnelle
+- simuler un dataset RH réaliste
 - analyser des indicateurs RH
 - produire des requêtes analytiques
-- vérifier la qualité des données dans un contexte SIRH
+- vérifier la cohérence et la qualité des données
 
-Le projet reproduit des problématiques courantes rencontrées dans les environnements RH et HRIS.
+Le projet reproduit des problématiques courantes rencontrées dans les environnements **SIRH / HRIS**.
+
+Les données utilisées sont simulées et représentent **un échantillon d'employés** afin de permettre l'exploration et l'analyse de données RH.
 
 ---
 
@@ -19,63 +22,57 @@ Le projet reproduit des problématiques courantes rencontrées dans les environn
 
 Entreprise fictive : **NovaTech**
 
-- 250 salariés
-- plusieurs départements
-- plusieurs sites en France
-- différents types de contrats
+L'entreprise dispose de plusieurs départements et suit les données RH de ses collaborateurs dans un système d'information RH.
+
+Les équipes RH souhaitent exploiter les données du SIRH afin de produire des indicateurs de pilotage tels que :
+
+- effectif par département
+- répartition des collaborateurs
+- ancienneté moyenne
 - suivi des absences
-- historique des salaires
+- analyse de la structure organisationnelle
 
-L'équipe RH souhaite exploiter les données du SIRH afin de produire des indicateurs de pilotage :
+Ce projet simule ces données afin de reproduire des analyses RH typiques réalisées dans un environnement **HR analytics**.
 
-- effectif
-- turnover
-- ancienneté
-- absentéisme
-- structure des contrats
-- analyse salariale
-
-  ---
+---
 
 ## Modèle de données
 
-La base de données contient les tables suivantes :
+La base de données repose sur une structure relationnelle composée des tables suivantes :
 
-### employees
-Informations collaborateurs
+### `departments`
+Référentiel des départements de l'entreprise.
 
-- employee_id
-- employee_number
-- first_name
-- last_name
-- gender
-- birth_date
-- hire_date
-- termination_date
-- department_id
-- job_title_id
-- location_id
-- manager_id
-- employment_status
+| colonne |
+|-------|
+department_id  
+department_name  
 
-### departments
-Référentiel des départements.
+---
 
-### job_titles
-Référentiel des postes et niveaux de rôle.
+### `employees`
+Informations collaborateurs.
 
-### locations
-Sites de l'entreprise.
+| colonne |
+|-------|
+employee_id  
+first_name  
+last_name  
+hire_date  
+department_id  
 
-### contracts
-Historique contractuel des salariés.
+---
 
-### absences
-Suivi des absences collaborateurs.
+### `absences`
+Suivi des absences des collaborateurs.
 
-### employee_salary_history
-Historique des rémunérations.
-
+| colonne |
+|-------|
+absence_id  
+employee_id  
+start_date  
+end_date  
+absence_type  
  ---
  
 ## Structure du projet
