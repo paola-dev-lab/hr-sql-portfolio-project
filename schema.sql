@@ -16,5 +16,5 @@ CREATE TABLE absences (
 	employee_id	INT REFERENCES employees(employee_id),
 	start_date	DATE	NOT NULL,
 	end_date	DATE	NOT NULL,
-	absence_type VARCHAR(10) NOT NULL
+	absence_type VARCHAR((50) NOT NULL
 );
