@@ -60,3 +60,15 @@ FROM
 INNER JOIN
 	departments
 	ON employees.department_id = departments.department_id;
+
+--effectif par départmement
+SELECT
+	department_name,
+		COUNT (employee_id) AS effectif
+FROM 
+	employees
+INNER JOIN
+	departments 
+		ON departments.department_id = employees.department_id
+GROUP BY 
+	department_name;
