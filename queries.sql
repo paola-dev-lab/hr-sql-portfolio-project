@@ -72,3 +72,16 @@ INNER JOIN
 		ON departments.department_id = employees.department_id
 GROUP BY 
 	department_name;
+
+-- Liste des absences avec le nom des employés
+SELECT 
+	first_name,
+	last_name,
+	absence_type,
+	start_date,
+	end_date
+FROM
+	absences
+INNER JOIN 
+	employees
+	ON employees.employee_id = absences.employee_id;
