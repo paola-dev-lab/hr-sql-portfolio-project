@@ -98,3 +98,15 @@ FROM
 INNER JOIN 
 	employees
 	ON employees.employee_id = absences.employee_id;
+
+
+-- Employés ayant eu une absence
+SELECT
+	first_name,
+	last_name,
+	absence_type
+FROM
+	absences
+INNER JOIN
+	employees
+	ON employees.employee_id = absences.employee_id;
