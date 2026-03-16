@@ -85,3 +85,16 @@ FROM
 INNER JOIN 
 	employees
 	ON employees.employee_id = absences.employee_id;
+
+-- Nombre d'absences par département
+SELECT 
+	first_name,
+	last_name,
+	absence_type,
+	start_date,
+	end_date
+FROM
+	absences
+INNER JOIN 
+	employees
+	ON employees.employee_id = absences.employee_id;
