@@ -22,4 +22,15 @@ INNER JOIN employees
 INNER JOIN departments
     ON departments.department_id = employees.department_id
 GROUP BY department_name;
-	
+
+--objectf: identifier les employees les plus anciens de l'entreprise
+-- Contexte métier: permet de repérer les collaborateurs avec le plus d'ancienneté
+--souvent associés à une forte connaissance de l'organisation ou à ds enjeux de fidélisation
+SELECT
+	first_name,
+	last_name,
+	hire_date
+FROM
+	employees
+ORDER BY 
+	hire_date LIMIT 10;
