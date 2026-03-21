@@ -7,12 +7,13 @@ SELECT
 FROM 
     employees;
 
--- Nombre d'absences par département
--- Cette requête permet de compter le volume total d'absences
--- dans chaque département en reliant les tables absences,
--- employees et departments.
+-- Objectif : mesurer le volume d'absences par département
+-- afin d’identifier les services les plus concernés.
+-- Contexte métier : dans un environnement RH, ce type d’analyse
+-- aide à repérer d’éventuels déséquilibres entre départements
+-- et à orienter plus finement le suivi de l’absentéisme.
 -- Résultat observé : le département Ressources Humaines
--- est celui qui enregistre le plus grand nombre d'absences.
+-- enregistre le plus grand nombre d'absences.
 SELECT 
     department_name,
     COUNT(absence_id) AS nombre_absences
