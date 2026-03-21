@@ -1,7 +1,8 @@
--- Ancienneté moyenne des employés en années
--- Cette requête calcule l’ancienneté moyenne des salariés à partir de leur date d’embauche.
--- Le nombre de jours écoulés depuis l’embauche est converti en années,
--- puis une moyenne est calculée sur l’ensemble des employés.
+-- Objectif : mesurer l’ancienneté moyenne des employés
+-- afin d’obtenir une vision synthétique de la stabilité des effectifs.
+-- Contexte métier : en RH, cet indicateur permet d’évaluer
+-- le niveau moyen d’expérience présent dans l’entreprise
+-- et d’apporter un premier éclairage sur la fidélisation des collaborateurs.
 SELECT 
     ROUND(AVG((CURRENT_DATE - hire_date) / 365.0), 1) AS anciennete_moyenne_employees
 FROM 
